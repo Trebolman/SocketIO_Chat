@@ -1,0 +1,11 @@
+<h1>Mensajes: La Botica</h1>
+<hr>
+<div id="chat-mensajes">
+  <li class="list-group-item" *ngFor="let msg of mensajes">
+    {{msg.de}} Dice: {{msg.cuerpo}}
+  </li>
+</div>
+
+<form (ngSubmit)=enviar()>
+  <input type="text" [(ngModel)]="mensaje" class="form-control input-chat" name="texto" placeholder="Mensaje..." autofocus autocomplete="off">
+</form>
