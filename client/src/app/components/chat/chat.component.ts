@@ -8,7 +8,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit, OnDestroy {
-  public mensajes:string[] = [];
+  // public mensajes:string[] = [];
+  public mensajes:any = [];
   public mensaje:string;
   public div:any;
   public mensajeSubscription:Subscription;
@@ -19,7 +20,6 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   // metodos
   ngOnInit() {
-    
     this.mensajeSubscription = this._chatService.recibirMensajes().subscribe((entrada)=>{
       this.div = document.getElementById("chat-mensajes");
       console.log(entrada);

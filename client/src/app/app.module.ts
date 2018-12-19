@@ -14,6 +14,7 @@ import { UsuarioGuardComponent } from './guards/usuario-guard/usuario-guard.comp
 
 import { AppRoutingModule } from "./app-routing.module";
 
+// nos conectamos
 const config: SocketIoConfig = { url: environment.wsUrl, options: {} };
 
 @NgModule({

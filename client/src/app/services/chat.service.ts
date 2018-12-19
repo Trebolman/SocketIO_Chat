@@ -12,7 +12,7 @@ export class ChatService {
   public enviarMensaje(mensaje:string){
     //construimos json el payload que enviamos a WebsocketService
     const payload = {
-      de: 'Danielé',
+      de: this._wsService.usuario.nombre,
       cuerpo: mensaje
     }
     //'menssaje':nombre del evento
