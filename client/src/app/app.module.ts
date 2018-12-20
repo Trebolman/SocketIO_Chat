@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MensajesComponent } from './pages/mensajes/mensajes.component';
-import { UsuarioGuardComponent } from './guards/usuario-guard/usuario-guard.component';
+// import { UsuarioGuardService } from './guards/usuario-guard/usuario-guard.service';
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -24,8 +24,7 @@ const config: SocketIoConfig = { url: environment.wsUrl, options: {} };
     ChatComponent,
     ListaUsuariosComponent,
     LoginComponent,
-    MensajesComponent,
-    UsuarioGuardComponent
+    MensajesComponent
   ],
   imports: [
     BrowserModule,

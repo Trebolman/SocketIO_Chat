@@ -64,4 +64,8 @@ export class WebsocketService {
     //   console.log(resp);
     // });
   }
+
+  public getUsuario(){
+    return this.usuario;
+  }
 }

@@ -23,7 +23,6 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.mensajeSubscription = this._chatService.recibirMensajes().subscribe((entrada)=>{
       this.div = document.getElementById("chat-mensajes");
       console.log(entrada);
-      console.log(typeof(entrada));
       this.mensajes.push(entrada);
       setTimeout(()=>{
         this.div.scrollTop = this.div.scrollHeight;

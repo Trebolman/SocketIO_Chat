@@ -8,7 +8,8 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors")); //npm install @types/cors
 const router_1 = require("./routes/router");
 //INstanciando el servidor
-const server = new server_1.default();
+// const server = new Server();
+const server = server_1.default.instance;
 //configurando bodyparser para que los argumentos que lleguen por urlencoded
 //lleguen en el arreglo 'body' del request
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));

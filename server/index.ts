@@ -4,7 +4,8 @@ import cors from 'cors';//npm install @types/cors
 import { router } from './routes/router';
 
 //INstanciando el servidor
-const server = new Server();
+// const server = new Server();
+const server = Server.instance;
 //configurando bodyparser para que los argumentos que lleguen por urlencoded
 //lleguen en el arreglo 'body' del request
 server.app.use(bodyParser.urlencoded({extended:true}));

@@ -24,6 +24,19 @@ export default class Server{
         this.io = socketIO(this.httpServer);
         this.escucharSockets();
     }
+
+    // Programando getter de la unica instancia de la clase
+    // patron de diseño singleton para no crear muchas instancias de Server
+    private static _instance:Server;
+    public static get instance(){//Es un get
+        if(this._instance){ //Si es que ya existe una instancia, retorna la misma instancia
+            return this._instance;
+        }else{
+            this._instance = new this();
+            return this._instance;
+        }
+    } 
+
     //funcion para escuchar las conexiones
     public escucharSockets(){
         console.log("Listo para recibir conexiones o sockets o clientes");
